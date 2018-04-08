@@ -31,7 +31,7 @@ resource "aws_elb" "webELB" {
   security_groups = ["${aws_default_security_group.default.id}"]
 
   listener {
-    instance_port     = 8080
+    instance_port     = 80
     instance_protocol = "http"
     lb_port           = 80
     lb_protocol       = "http"
@@ -41,7 +41,7 @@ resource "aws_elb" "webELB" {
     healthy_threshold   = 2
     unhealthy_threshold = 2
     timeout             = 3
-    target              = "TCP:8080"
+    target              = "TCP:80"
     interval            = 5
   }
 
