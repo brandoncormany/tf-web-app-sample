@@ -1,6 +1,6 @@
 resource "aws_subnet" "privateA" {
   vpc_id            = "${aws_vpc.webapp_vpc.id}"
-  cidr_block        = "10.255.100.0/24"
+  cidr_block        = "10.101.100.0/24"
   availability_zone = "${var.region}a"
 
   tags {
@@ -10,7 +10,7 @@ resource "aws_subnet" "privateA" {
 
 resource "aws_subnet" "privateB" {
   vpc_id            = "${aws_vpc.webapp_vpc.id}"
-  cidr_block        = "10.255.101.0/24"
+  cidr_block        = "10.101.101.0/24"
   availability_zone = "${var.region}b"
 
   tags {
@@ -20,7 +20,7 @@ resource "aws_subnet" "privateB" {
 
 resource "aws_subnet" "privateC" {
   vpc_id            = "${aws_vpc.webapp_vpc.id}"
-  cidr_block        = "10.255.102.0/24"
+  cidr_block        = "10.101.102.0/24"
   availability_zone = "${var.region}c"
 
   tags {
