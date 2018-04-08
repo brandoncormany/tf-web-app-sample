@@ -44,10 +44,6 @@ resource "aws_elb" "webELB" {
     target              = "TCP:80"
     interval            = 5
   }
-
-  tags {
-    Name = "jenkins-elb"
-  }
 }
 
 resource "aws_autoscaling_group" "webappASG" {
